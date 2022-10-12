@@ -37,14 +37,14 @@ export function Dropdown(props: DropdownProps) {
       {isOpen && (
         <div
           ref={itemsRef}
-          className="absolute right-0 mt-4 w-max rounded-2xl border bg-white p-4"
+          className="absolute right-0 mt-4 w-full  rounded-2xl border bg-white p-4"
           tabIndex={-1}
           onBlur={() => close()}
         >
           {props.items.map(({ name, href }) => (
             <div
               key={href + name}
-              className="rounded-2xl p-4 hover:bg-gray-100"
+              className="flex rounded-2xl p-4 hover:bg-gray-100"
               tabIndex={0}
             >
               <Link href={href}>{name}</Link>

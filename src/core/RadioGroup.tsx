@@ -8,7 +8,7 @@ export function RadioGroup({ label, disabled, options }: RadioGroupProps) {
   return (
     <fieldset
       disabled={!!disabled}
-      className="group flex flex-col rounded-2xl border p-4 disabled:text-gray-300"
+      className="group flex flex-col rounded-2xl border p-4 hover:enabled:border-gray-300 disabled:text-gray-300"
     >
       <legend className="text-lg">{label}</legend>
       {options.map(({ name }) => (

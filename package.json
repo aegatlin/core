@@ -1,5 +1,5 @@
 {
-  "name": "deco",
+  "name": "core",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "format": "prettier --write ."
+    "format": "prettier --write src pages"
   },
   "keywords": [],
   "author": "",

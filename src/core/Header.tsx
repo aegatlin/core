@@ -6,7 +6,7 @@ export function Header() {
   const menuItems = [{ name: 'About', href: '/about' }]
 
   return (
-    <header className="flex items-center justify-between border-b py-8 px-16">
+    <header className="flex items-center justify-between border-b py-8 px-16 hover:border-gray-300">
       <div className="text-4xl">
         <Link href={'/'}>
           <a>Core</a>
