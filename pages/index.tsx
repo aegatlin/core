@@ -3,6 +3,7 @@ import { Card } from '../src/core/Card'
 import { Header } from '../src/core/Header'
 import { DemoDropdown } from '../src/demo/DemoDropdown'
 import { DemoInputText } from '../src/demo/DemoInputText'
+import { DemoMenu } from '../src/demo/DemoMenu'
 import { DemoRadioGroup } from '../src/demo/DemoRadioGroup'
 import { DemoSearch } from '../src/demo/DemoSearch'
 import { DemoWrapper } from '../src/demo/DemoWrapper'
@@ -36,6 +37,7 @@ export default function Index() {
         <DemoCard />
         <DemoButton />
         <DemoDropdown />
+        <DemoMenu />
         <DemoRadioGroup />
         <DemoSearch />
         <DemoInputText />

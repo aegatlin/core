@@ -1,6 +1,5 @@
-import { Menu } from 'lucide-react'
+import { Github } from 'lucide-react'
 import Link from 'next/link'
-import { Dropdown } from './Dropdown'
 
 export function Header() {
   const menuItems = [{ name: 'About', href: '/about' }]
@@ -19,11 +18,11 @@ export function Header() {
               <Link href={href}>{name}</Link>
             </div>
           ))}
-        </div>
-        <div className="md:hidden">
-          <Dropdown items={menuItems}>
-            <Menu />
-          </Dropdown>
+          <Link href="https://github.com/aegatlin/core">
+            <a>
+              <Github />
+            </a>
+          </Link>
         </div>
       </div>
     </header>

@@ -20,7 +20,7 @@ export function InputText({
   return (
     <input
       type="text"
-      className="rounded-2xl border p-4 enabled:hover:border-gray-300 disabled:cursor-not-allowed disabled:text-gray-400"
+      className="rounded-2xl border p-4 enabled:hover:border-gray-300 disabled:cursor-not-allowed disabled:text-gray-400 max-w-full"
       value={value}
       placeholder={placeholder}
       disabled={disabled}

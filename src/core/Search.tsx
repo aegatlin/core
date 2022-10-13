@@ -1,5 +1,6 @@
 import { Loader, Search as SearchIcon } from 'lucide-react'
-import { ReactNode, useState } from 'react'
+import { ReactNode } from 'react'
+import { Dropdown } from './Dropdown'
 import { InputText } from './InputText'
 
 interface SearchProps {
@@ -15,26 +16,24 @@ export function Search({
   isFetching,
   results,
 }: SearchProps) {
-  const [isFocused, setIsFocused] = useState(false)
   const isResults = results.length > 0
-  const isOpen = isFocused && query
 
   return (
-    <div className="relative">
-      <div className="relative flex items-center justify-between">
-        <InputText
-          value={query}
-          placeholder={'try "is"...'}
-          onChange={(e) => updateQuery(e.target.value)}
-          onBlur={() => setIsFocused(false)}
-          onFocus={() => setIsFocused(true)}
-        />
-        <div className="absolute right-0 ml-2 text-gray-400">
-          <SearchIcon />
+    <Dropdown>
+      <Dropdown.Input>
+        <div className="flex items-center justify-between">
+          <InputText
+            value={query}
+            placeholder={'try "is"...'}
+            onChange={(e) => updateQuery(e.target.value)}
+          />
+          <div className="absolute right-0 mx-4 text-gray-400">
+            <SearchIcon />
+          </div>
         </div>
-      </div>
-      {isOpen && (
-        <div className="absolute top-20 w-full rounded-2xl border bg-white p-4 shadow">
+      </Dropdown.Input>
+      {query && (
+        <Dropdown.Items>
           {isFetching ? (
             <div className="flex h-32 items-center justify-center">
               <Loader className="animate-spin" />
@@ -46,8 +45,8 @@ export function Search({
               No Results
             </div>
           )}
-        </div>
+        </Dropdown.Items>
       )}
-    </div>
+    </Dropdown>
   )
 }

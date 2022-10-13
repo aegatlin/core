@@ -1,24 +1,26 @@
 import { ChevronDown } from 'lucide-react'
+import { Button } from '../core/Button'
 import { Dropdown } from '../core/Dropdown'
 import { DemoWrapper } from './DemoWrapper'
 
 export function DemoDropdown() {
   return (
     <DemoWrapper title="Dropdown">
-      <div className="flex flex-col items-end space-y-8">
-        <Dropdown
-          items={[
-            { name: 'Item One', href: '/' },
-            { name: 'Item Two', href: '/' },
-            { name: 'Item Three with a long name', href: '/' },
-          ]}
-        >
-          <div className="flex space-x-2">
-            <span>Dropdown Menu</span>
-            <ChevronDown />
+      <Dropdown>
+        <Dropdown.Input>
+          <div className="flex justify-end">
+            <Button onClick={() => null}>
+              <div className="flex space-x-2">
+                <span>Any Input</span>
+                <ChevronDown />
+              </div>
+            </Button>
           </div>
-        </Dropdown>
-      </div>
+        </Dropdown.Input>
+        <Dropdown.Items>
+          <div className="hover:bg-gray-100 rounded-2xl p-4">any content</div>
+        </Dropdown.Items>
+      </Dropdown>
     </DemoWrapper>
   )
 }

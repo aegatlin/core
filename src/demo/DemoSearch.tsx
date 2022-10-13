@@ -33,7 +33,7 @@ function search(
   return fakePromise(results, 100)
 }
 
-function Hit({ hit: { id, value, relevance } }: { hit: Item }) {
+function Result({ hit: { id, value, relevance } }: { hit: Item }) {
   return (
     <div
       key={id}
@@ -58,16 +58,19 @@ export function DemoSearch() {
     })
   }, [query])
 
-  const hits = results.map((r) => <Hit key={r.id} hit={r} />)
+  const resultsComponent = results.map((r) => <Result key={r.id} hit={r} />)
 
   return (
     <DemoWrapper title="Search">
-      <Search
-        query={query}
-        updateQuery={(q) => setQuery(q)}
-        isFetching={isFetching}
-        results={hits}
-      />
+      <div className="space-y-8">
+        <p>Search uses Dropdown internally.</p>
+        <Search
+          query={query}
+          updateQuery={(q) => setQuery(q)}
+          isFetching={isFetching}
+          results={resultsComponent}
+        />
+      </div>
     </DemoWrapper>
   )
 }
