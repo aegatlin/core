@@ -1,6 +1,7 @@
 import { Button } from '../src/core/Button'
 import { Card } from '../src/core/Card'
 import { Header } from '../src/core/Header'
+import { DemoModal } from '../src/demo/DemoModal'
 import { DemoDropdown } from '../src/demo/DemoDropdown'
 import { DemoInputText } from '../src/demo/DemoInputText'
 import { DemoMenu } from '../src/demo/DemoMenu'
@@ -24,7 +25,9 @@ function DemoButton() {
 function DemoCard() {
   return (
     <DemoWrapper title="Card">
-      <Card>card content</Card>
+      <Card>
+        <p className="p-8">card content</p>
+      </Card>
     </DemoWrapper>
   )
 }
@@ -34,6 +37,7 @@ export default function Index() {
     <>
       <Header />
       <div className="my-16 mx-32 flex flex-wrap justify-center gap-8">
+        <DemoModal />
         <DemoCard />
         <DemoButton />
         <DemoDropdown />

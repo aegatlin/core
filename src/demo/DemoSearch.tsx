@@ -63,7 +63,7 @@ export function DemoSearch() {
   return (
     <DemoWrapper title="Search">
       <div className="space-y-8">
-        <p>Search uses Dropdown internally.</p>
+        <p>Search uses Dropdown and InputText internally.</p>
         <Search
           query={query}
           updateQuery={(q) => setQuery(q)}

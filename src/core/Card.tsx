@@ -1,6 +1,6 @@
 export function Card({ children }) {
   return (
-    <div className="rounded-2xl border p-8 shadow-sm hover:border-gray-300">
+    <div className="overflow-hidden rounded-2xl border shadow-sm hover:border-gray-300">
       {children}
     </div>
   )

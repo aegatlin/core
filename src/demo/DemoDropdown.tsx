@@ -18,7 +18,7 @@ export function DemoDropdown() {
           </div>
         </Dropdown.Input>
         <Dropdown.Items>
-          <div className="hover:bg-gray-100 rounded-2xl p-4">any content</div>
+          <div className="rounded-2xl p-4 hover:bg-gray-100">any content</div>
         </Dropdown.Items>
       </Dropdown>
     </DemoWrapper>
