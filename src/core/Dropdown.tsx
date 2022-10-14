@@ -41,7 +41,7 @@ function Items({ children }) {
   return (
     <div
       tabIndex={-1}
-      className="absolute right-0 z-10 mt-4 hidden w-full rounded-2xl border bg-white p-4 hover:border-gray-300 group-focus-within:block"
+      className="absolute right-0 z-10 mt-4 hidden min-w-full rounded-2xl border bg-white p-4 hover:border-gray-300 group-focus-within:block"
     >
       {children}
     </div>
