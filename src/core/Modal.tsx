@@ -1,19 +1,16 @@
 import { MouseEvent, ReactNode } from 'react'
 
 interface ModalProps {
-  isOpen: boolean
-  onClick: (e: MouseEvent) => void
+  onBackdropClick: (e: MouseEvent) => void
   children: ReactNode
 }
 
-export function Modal({ isOpen, onClick, children }: ModalProps) {
-  if (!isOpen) return null
-
+export function Modal({ onBackdropClick, children }: ModalProps) {
   const handleClick = (e: MouseEvent) => {
     const backdropEl = e.currentTarget
     const clickedEl = e.target
     const isBackdropClicked = backdropEl == clickedEl
-    if (isBackdropClicked) onClick(e)
+    if (isBackdropClicked) onBackdropClick(e)
   }
 
   return (

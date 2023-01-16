@@ -1,10 +1,11 @@
 import { Button } from '../src/core/Button'
 import { Card } from '../src/core/Card'
 import { Header } from '../src/core/Header'
-import { DemoModal } from '../src/demo/DemoModal'
 import { DemoDropdown } from '../src/demo/DemoDropdown'
 import { DemoInputText } from '../src/demo/DemoInputText'
+import { DemoInputTextArea } from '../src/demo/DemoInputTextArea'
 import { DemoMenu } from '../src/demo/DemoMenu'
+import { DemoModal } from '../src/demo/DemoModal'
 import { DemoRadioGroup } from '../src/demo/DemoRadioGroup'
 import { DemoSearch } from '../src/demo/DemoSearch'
 import { DemoWrapper } from '../src/demo/DemoWrapper'
@@ -36,7 +37,8 @@ export default function Index() {
   return (
     <>
       <Header />
-      <div className="my-16 mx-32 flex flex-wrap justify-center gap-8">
+      <div className="my-16 mx-4 flex flex-wrap justify-center gap-8 md:mx-32">
+        <DemoInputTextArea />
         <DemoModal />
         <DemoCard />
         <DemoButton />
