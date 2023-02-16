@@ -1,6 +1,7 @@
 import { Button } from '../src/core/Button'
 import { Card } from '../src/core/Card'
 import { Header } from '../src/core/Header'
+import { DemoDrawer } from '../src/demo/DemoDrawer'
 import { DemoDropdown } from '../src/demo/DemoDropdown'
 import { DemoInputText } from '../src/demo/DemoInputText'
 import { DemoInputTextArea } from '../src/demo/DemoInputTextArea'
@@ -38,6 +39,7 @@ export default function Index() {
     <>
       <Header />
       <div className="my-16 mx-4 flex flex-wrap justify-center gap-8 md:mx-32">
+        <DemoDrawer />
         <DemoInputTextArea />
         <DemoModal />
         <DemoCard />
