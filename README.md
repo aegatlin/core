@@ -6,10 +6,11 @@ The idea is to have copy-and-pastable snippets of code that make for simple yet 
 
 The motivation is that component libraries are (hypothesis) fundamentally inadequate in that they don't ultimately give you control. At the end of the day, you will want to customize your components in some manner that your library won't let you. Or, if they let you, they have made the component so complicated and/or exposed so many APIs on it that it is unpleasant to work with. The solution is to "just" make your own components each time. This suffers from the problem of tedium. To solve the tedium problem, a living repo of "just components" that you do NOT install as a dependency, but instead copy the code from, means that (1) you get a sophisticated starting point for your basic components, and (2) it is not a static resource (because this repo will be maintained and upgraded over time).
 
-## Todos
+## Questions
 
--[] Something like a `Blur` component is now in use in Modal and Drawer. Should a `Blur` component exist?
+-[] Something like a `Blur` component is now implicit in Modal and Drawer, and they could drift, creating inconsistent user experience. Should a `Blur` component exist?
 
 ## Captain's Log
 
-- No `Link` component exists because link-optimization is currently a "framework thing", e.g., `next/link` in Next.js. In order to avoid complexity, I am choosing to NOT build a link component.
+- (02/2023) No animations! Things can get a lot more "delightful", but where to stop becomes a problem. Plus, you can't just copy the file, you'd then have to copy the tailwind config, which might have _more_ config that you wanted. This increases complexity and so is not desirable. Rather, you can add your own animations on real projects.
+- (prehistory) No `Link` component! The reasoning is that link optimization is becoming a "framework thing", e.g., `next/link` in Next.js. Simplicity says "no" to being framework-aware.
