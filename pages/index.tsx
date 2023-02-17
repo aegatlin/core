@@ -5,7 +5,6 @@ import { DemoDrawer } from '../src/demo/DemoDrawer'
 import { DemoDropdown } from '../src/demo/DemoDropdown'
 import { DemoInputText } from '../src/demo/DemoInputText'
 import { DemoInputTextArea } from '../src/demo/DemoInputTextArea'
-import { DemoMenu } from '../src/demo/DemoMenu'
 import { DemoModal } from '../src/demo/DemoModal'
 import { DemoRadioGroup } from '../src/demo/DemoRadioGroup'
 import { DemoSearch } from '../src/demo/DemoSearch'
@@ -45,7 +44,6 @@ export default function Index() {
         <DemoCard />
         <DemoButton />
         <DemoDropdown />
-        <DemoMenu />
         <DemoRadioGroup />
         <DemoSearch />
         <DemoInputText />
